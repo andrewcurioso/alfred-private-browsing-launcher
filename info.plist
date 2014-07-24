@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.andrewcurioso.alfred.privatebrowse</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>8B0EBF1C-E088-4A09-BD8F-E69E3C4D380B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>705AC5D1-688D-4CF6-86ED-0AD54D8A8CAF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>BB370F55-A2D2-4CA8-A92C-59BB68A4DD31</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9E6B5032-1137-4002-9716-1356A6CDCD36</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>FCEF34B5-EBA8-4796-9D84-DD2E68ABA774</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F1D2C181-7D13-49AC-873D-5E9C67FF54E7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Andrew Curioso</string>
+	<key>description</key>
+	<string>Quickly open a web browser window incognito/private mode</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Private Browsing Launcher</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Google Chrome"
+    activate
+    tell application "System Events" to keystroke "n" using {command down, shift down}
+  end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>705AC5D1-688D-4CF6-86ED-0AD54D8A8CAF</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>chrome incognito</string>
+				<key>text</key>
+				<string>Open an incognito 'Google Chrome' window</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>8B0EBF1C-E088-4A09-BD8F-E69E3C4D380B</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>firefox private</string>
+				<key>text</key>
+				<string>Open a private 'Firefox' window</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>BB370F55-A2D2-4CA8-A92C-59BB68A4DD31</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Firefox"
+    activate
+    tell application "System Events" to keystroke "p" using {command down, shift down}
+  end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>9E6B5032-1137-4002-9716-1356A6CDCD36</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>opera private</string>
+				<key>text</key>
+				<string>Open a private 'Opera' window</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>FCEF34B5-EBA8-4796-9D84-DD2E68ABA774</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Opera"
+    if it is not running then
+      activate
+      delay 0.1
+    end if
+    activate
+    tell application "System Events" to keystroke "n" using {command down, shift down}
+  end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>F1D2C181-7D13-49AC-873D-5E9C67FF54E7</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>This is a great workflow for launching a private browser. Perfect for when you need to test a website without your cookies or extensions loaded.
+
+Icon created by Deleket - http://deleket.deviantart.com/
+https://www.iconfinder.com/icons/22268/ghost_halloween_icon</string>
+	<key>uidata</key>
+	<dict>
+		<key>705AC5D1-688D-4CF6-86ED-0AD54D8A8CAF</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>8B0EBF1C-E088-4A09-BD8F-E69E3C4D380B</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>9E6B5032-1137-4002-9716-1356A6CDCD36</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>BB370F55-A2D2-4CA8-A92C-59BB68A4DD31</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>F1D2C181-7D13-49AC-873D-5E9C67FF54E7</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>FCEF34B5-EBA8-4796-9D84-DD2E68ABA774</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://www.andrewcurioso.com/</string>
+</dict>
+</plist>
